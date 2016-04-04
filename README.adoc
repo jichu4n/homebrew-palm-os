@@ -1,5 +1,5 @@
-Homebrew Tap for Palm OS
-~~~~~~~~~~~~~~~~~~~~~~~~
+Homebrew Tap for Palm OS Utilities
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This repository contains Homebrew formulae for working with Palm OS devices.
 
