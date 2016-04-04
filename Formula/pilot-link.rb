@@ -56,7 +56,6 @@ class PilotLink < Formula
                           "--enable-static"
     system "make", "install"
     system "make", "-C", "doc/man", "install"
-    system "make", "-C", "bindings", "install"
   end
 
   def caveats; <<-EOS.undent
