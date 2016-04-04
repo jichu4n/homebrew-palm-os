@@ -1,0 +1,21 @@
+Homebrew Tap for Palm OS
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+This repository contains Homebrew formulae for working with Palm OS devices.
+
+pilot-link
+^^^^^^^^^^
+
+pilot-link is a suite of tools for connecting to Palm OS devices on Unix-like
+systems. The original website (http://www.pilot-link.org) is now defunct, but
+you can refer to the man pages (e.g.
+http://manpages.ubuntu.com/manpages/en/man1/pilot-xfer.1.html[here]) and online
+resources for help. A good place to start would be the
+http://www.tldp.org/HOWTO/PalmOS-HOWTO/pilotlink.html[TLDP pilot-link HOWTO].
+
+To install:
+----
+$ brew tap jichu4n/palm-os
+$ brew install pilot-link
+----
+
