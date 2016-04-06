@@ -18,9 +18,9 @@
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #                                                                             #
-#    Brew formula for PRC-Tools (http://prc-tools.sourceforge.net).           #
+#    Brew formula for prc-tools (http://prc-tools.sourceforge.net).           #
 #                                                                             #
-#    This formula is based on the the PRC-Tools Remix codebase at             #
+#    This formula is based on the the prc-tools remix codebase at             #
 #                                                                             #
 #    https://github.com/jichu4n/prc-tools-remix                               #
 #                                                                             #
@@ -52,7 +52,7 @@ class PrcTools < Formula
   end
 
   def caveats; <<-EOS.undent
-    PRC-Tools is now installed. Please install Palm OS SDK in
+    prc-tools is now installed. Please install Palm OS SDK in
 
         #{opt_prefix}/palmdev
 

@@ -19,3 +19,21 @@ $ brew tap jichu4n/palm-os
 $ brew install pilot-link
 ----
 
+prc-tools
+^^^^^^^^^
+
+http://prc-tools.sourceforge.net/[PRC-Tools] is a collection of tools supporting
+C and C++ programming for Palm OS. It supplies a full GCC cross-compilation
+toolchain for https://en.wikipedia.org/wiki/Motorola_68000_series[m68k] and
+https://en.wikipedia.org/wiki/ARM_architecture[ARM], as well as Palm OS-specific
+utilities.
+
+This formula uses the https://github.com/jichu4n/prc-tools-remix codebase, which
+patches the last prc-tools release to compile and run on modern Linux and Mac OS
+X.
+
+To install:
+----
+$ brew tap jichu4n/palm-os
+$ brew install prc-tools
+----
