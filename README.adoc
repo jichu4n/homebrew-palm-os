@@ -61,3 +61,16 @@ $ brew install palm-os-sdk
 You will then need to run `palmdev-prep` to let prc-tools know about the SDK
 location.
 
+pilrc
+^^^^^
+
+http://pilrc.sourceforge.net/[PilRC] is a Palm OS resource compiler. It compiles
+a textual description of Palm OS forms, bitmaps, fonts, and other resources into
+a binary form that can be included in an application or library.
+
+To install:
+----
+$ brew tap jichu4n/palm-os
+$ brew install pilrc
+----
+
