@@ -36,6 +36,7 @@ class PalmOsSdk < Formula
 
   def install
     cp_r "sdk-5r3", "#{prefix}"
+    mkdir_p "#{HOMEBREW_PREFIX}/opt/prc-tools/palmdev"
     ln_s "#{prefix}/sdk-5r3", "#{HOMEBREW_PREFIX}/opt/prc-tools/palmdev/sdk-5r3"
   end
 
