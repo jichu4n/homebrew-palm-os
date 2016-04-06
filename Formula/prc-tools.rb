@@ -29,8 +29,8 @@
 class PrcTools < Formula
   desc "Collection of tools supporting C and C++ programming for Palm OS"
   homepage "http://prc-tools.sourceforge.net"
-  url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.2.tar.gz"
-  sha256 "23b46efd3881da2bc6f86c0a872c69abe4ec57bc3f1fb7627d7e6e88aadb2321"
+  url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.3.tar.gz"
+  sha256 "e3225c8bc0ef9c56e276e0e0c6d2ece6a5192eae1a19b17c28eee441d0710200"
 
   depends_on "autoconf"
 
