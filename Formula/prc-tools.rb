@@ -32,7 +32,7 @@ class PrcTools < Formula
   url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.3.tar.gz"
   sha256 "e3225c8bc0ef9c56e276e0e0c6d2ece6a5192eae1a19b17c28eee441d0710200"
 
-  depends_on "autoconf"
+  depends_on "autoconf" => :build
 
   def install
     ENV.deparallelize
@@ -45,7 +45,8 @@ class PrcTools < Formula
         "--with-palmdev-prefix=#{opt_prefix}/palmdev",
         "--prefix=#{prefix}",
         "--libexecdir=#{libexec}",
-        "--mandir=#{man}"
+        "--mandir=#{man}",
+        "--infodir=#{info}"
       system "make"
       system "make", "install"
     end
