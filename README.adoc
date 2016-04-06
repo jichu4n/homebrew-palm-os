@@ -22,13 +22,14 @@ $ brew install pilot-link
 prc-tools
 ^^^^^^^^^
 
-http://prc-tools.sourceforge.net/[PRC-Tools] is a collection of tools supporting
+http://prc-tools.sourceforge.net/[prc-tools] is a collection of tools supporting
 C and C++ programming for Palm OS. It supplies a full GCC cross-compilation
 toolchain for https://en.wikipedia.org/wiki/Motorola_68000_series[m68k] and
 https://en.wikipedia.org/wiki/ARM_architecture[ARM], as well as Palm OS-specific
 utilities.
 
-This formula uses the https://github.com/jichu4n/prc-tools-remix codebase, which
+This formula uses the
+https://github.com/jichu4n/prc-tools-remix[prc-tools-remix] codebase, which
 patches the last prc-tools release to compile and run on modern Linux and Mac OS
 X.
 
@@ -37,3 +38,9 @@ To install:
 $ brew tap jichu4n/palm-os
 $ brew install prc-tools
 ----
+
+The compilation takes about 5-10 minutes, as measured on a 2012 MacBook Pro
+(Core i5 Ivy Bridge) and a 2014 MacBook Pro (Core i5 Haswell).
+
+After install, prc-tools will look for Palm OS SDK files in
++/usr/local/opt/prc-tools/palmdev+.
