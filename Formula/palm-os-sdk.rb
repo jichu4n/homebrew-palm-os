@@ -18,52 +18,37 @@
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #                                                                             #
-#    Brew formula for prc-tools (http://prc-tools.sourceforge.net).           #
+#    Brew formula for Palm OS SDK.                                            #
 #                                                                             #
-#    This formula is based on the the prc-tools remix codebase at             #
+#    This formula uses the Palm OS SDK archive at                             #
 #                                                                             #
-#    https://github.com/jichu4n/prc-tools-remix                               #
+#    https://github.com/jichu4n/palm-os-sdk                                   #
 #                                                                             #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-class PrcTools < Formula
-  desc "Collection of tools supporting C and C++ programming for Palm OS"
-  homepage "http://prc-tools.sourceforge.net"
-  url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.2.tar.gz"
-  sha256 "23b46efd3881da2bc6f86c0a872c69abe4ec57bc3f1fb7627d7e6e88aadb2321"
+class PalmOsSdk < Formula
+  desc "Palm OS SDK"
+  homepage "https://github.com/jichu4n/palm-os-sdk"
+  url "https://github.com/jichu4n/palm-os-sdk/archive/5.0.3.tar.gz"
+  sha256 "ed4dc80bbaf3615b73a41237c310ec64a2cf3b28f3278a0155b1815e567e30ee"
 
-  depends_on "autoconf"
+  depends_on "prc-tools"
 
   def install
-    ENV.deparallelize
-    mkdir "build" do
-      system "../prc-tools-2.3/configure",
-        "--enable-targets=m68k-palmos,arm-palmos",
-        "--enable-languages=c,c++",
-        "--disable-nls",
-        "--host=i686-apple-darwin",
-        "--with-palmdev-prefix=#{opt_prefix}/palmdev",
-        "--prefix=#{prefix}",
-        "--libexecdir=#{libexec}",
-        "--mandir=#{man}"
-      system "make"
-      system "make", "install"
-    end
+    cp_r "sdk-5r3", "#{prefix}"
+    ln_s "#{prefix}/sdk-5r3", "#{HOMEBREW_PREFIX}/opt/prc-tools/palmdev/sdk-5r3"
   end
 
   def caveats; <<-EOS.undent
-    prc-tools is now installed. Please install Palm OS SDK in
+    The Palm OS SDK files have been installed. Please run
 
-        #{opt_prefix}/palmdev
+        palmdev-prep
 
-    You can install the Palm OS SDK from this tap:
-
-        brew install palm-os-sdk
-
+    to configure prc-tools.
     EOS
   end
 
   test do
-    system "m68k-palmos-gcc", "--version"
+    system "ls", "#{prefix}/sdk-5r3"
   end
 end
