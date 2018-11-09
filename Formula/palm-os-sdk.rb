@@ -40,7 +40,7 @@ class PalmOsSdk < Formula
     ln_s "#{prefix}/sdk-5r3", "#{HOMEBREW_PREFIX}/opt/prc-tools/palmdev/sdk-5r3"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     The Palm OS SDK files have been installed. Please run
 
         palmdev-prep

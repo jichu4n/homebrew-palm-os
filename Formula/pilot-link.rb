@@ -58,7 +58,7 @@ class PilotLink < Formula
     system "make", "-C", "doc/man", "install"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     All pilot-link commands (such as pilot-xfer) require a port argument (-p).
     On OS X, the correct port is "usb:" (note the trailing colon). As an
     example, you would use the following command to list the databases on the

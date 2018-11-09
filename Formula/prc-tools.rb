@@ -52,7 +52,7 @@ class PrcTools < Formula
     end
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     prc-tools is now installed. Please install Palm OS SDK in
 
         #{opt_prefix}/palmdev
