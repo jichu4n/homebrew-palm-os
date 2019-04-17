@@ -44,7 +44,7 @@ The compilation takes about 5-10 minutes, as measured on a 2012 MacBook Pro
 
 After install, prc-tools will look for Palm OS SDK files in
 `/usr/local/opt/prc-tools/palmdev`. You can either download and extract the SDK
-files yourself, or use the palm-os-sdk formula below.
+files yourself, or use the `palm-os-sdk` formula below.
 
 palm-os-sdk
 ^^^^^^^^^^^

@@ -28,9 +28,9 @@
 
 class PrcTools < Formula
   desc "Collection of tools supporting C and C++ programming for Palm OS"
-  homepage "http://prc-tools.sourceforge.net"
-  url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.3.tar.gz"
-  sha256 "e3225c8bc0ef9c56e276e0e0c6d2ece6a5192eae1a19b17c28eee441d0710200"
+  homepage "https://github.com/jichu4n/prc-tools-remix"
+  url "https://github.com/jichu4n/prc-tools-remix/archive/2.3.4.tar.gz"
+  sha256 "1010d5cf6e5022bd5b345eda9b086f7ba9aaf00302ce135fbc7472f472fabaaa"
 
   depends_on "autoconf" => :build
 
@@ -47,7 +47,8 @@ class PrcTools < Formula
         "--libexecdir=#{libexec}",
         "--mandir=#{man}",
         "--infodir=#{info}"
-      system "make"
+      # Running make directly fails if current shell is non-POSIX, e.g. fish.
+      system "env", "SHELL=/bin/sh", "make"
       system "make", "install"
     end
   end
